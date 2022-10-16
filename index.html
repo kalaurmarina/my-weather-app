@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link href="src/style.css" rel="stylesheet"/>
+     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/40b2e97f98.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-text-wrapper">
+        <form class="search-city" id="search-city">
+            <i class="fa-solid fa-compass location-icon"></i>
+            <input type="submit" class="location-button shadow-sm" id="current-loc" value="Current location">
+            <input type="text" id="search-input" placeholder="Enter a city" autofocus="on" autocomplete="off">
+            <input type="submit" class="search-button shadow-sm" id="search-engine" value="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        </form>
+    
+        <br/>
+        <div class="weather-forecast"
+        id="forecast">
+       
+        </div>
+
+        <br/>
+        <div class="row m-0 about-weather">
+            <div class="col-4">
+        <h1 id="city">
+            KYIV
+        </h1>
+        <h2 id="date">
+            Sunday 12:10
+        </h2>
+            </div>
+            <div class="col-4">
+            <img 
+            src="images/icons/01d.png" 
+            width="120px" 
+            height="120px"
+            alt="Clear"
+            id="icon">
+            </div>
+            <div class="col-4">
+            <div class="weather-temperature"> 
+        <p class="current-temperature">
+            <span class="degree-this-day" id="temperature">29</span>
+            <span class="units"> 
+                <a href="#" id="celsius-link" class="active">°C</a> | 
+                <a href="#" id="fahrenheit-link"> °F</a> 
+            </span>   
+             <br/>
+             <p id="weather-descr">Sunny</p>
+        </p>
+            </div>
+        </div>
+        </div>
+        
+        <br/>
+        <div class="row m-0 ">
+            <div class="col sm-6 weather-information">
+                Humidity:
+                <br/>
+                <img 
+                    src="images/icons/icons-wet.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
+                <br/>
+                <p id="humidity"> 32 % </p>
+            </div>
+            <div class="col weather-information">
+                Wind:
+                <br/>
+                <img 
+                    src="images/icons/icons-wind.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
+                <br/>
+                <p id="wind">6.26 m/h</p>
+            </div>
+            <div class="col weather-information">
+                Pressure
+                <br/>
+                <img 
+                    src="images/icons/icons-pressure.png" 
+                    width="20px" 
+                    height="20px"
+                    alt="Clear"
+                    id="icon">
+                <br/>
+                <p id="pressure">1000 hPa</p>
+            </div>
+
+        </div>
+        <small 
+        class="resourse">
+        <a 
+        href="https://github.com/kalaurmarina/my-weather-app.git" 
+        target="_blank"
+        >Open-source code</a
+        > 
+        by Maryna Kalaur
+    </small>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+</html>
